@@ -244,7 +244,29 @@
     <!-- end slider section -->
 
 
-  
+    <!-- product -->
+
+    <div class="container">
+        <h1 class="text-center mt-5">Danh sách sản phẩm</h1>
+        <div class="product-container ">
+            {% for product in products %}
+            <a href="{{ path('app_productdetail', {'id': product.getId()}) }}">
+                <div class="product-card">
+                    <img src="{{ asset('images/' ~ product.getImage()) }}" alt="{{ product.getName() }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.getName() }}</h5>
+                        <p class="card-text">Giá: {{ product.getPrice() }}.VND</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="addToCartBtn">Add to Cart</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <br>
+    <!-- end product -->
 
 
     <!-- feature section -->
