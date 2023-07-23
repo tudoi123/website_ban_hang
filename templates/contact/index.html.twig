@@ -2,9 +2,18 @@
 
 {% block title %}Contact index{% endblock %}
 
-{% block body %}
 
-    <h1>Contact index</h1>
+{% block body %}
+    <style>
+        *{
+            font-family: "Times New Roman";
+        }
+
+        h1{
+            font-family: "Times New Roman";
+        }
+    </style>
+    <h1 style="text-align: center">Contact Management</h1>
 
     <table class="table">
         <thead>
@@ -25,7 +34,7 @@
                 <td>{{ contact.email }}</td>
                 <td>{{ contact.note }}</td>
                 <td>
-                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}">show</a>
+                    <a href="{{ path('app_contact_show', {'id': contact.id}) }}" class="btn btn-outline-dark">show</a>
 
                 </td>
             </tr>

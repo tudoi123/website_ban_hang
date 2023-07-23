@@ -12,6 +12,15 @@
         {% block javascripts %}
         {% endblock %}
 
+        <style>
+            *{
+                font-family: "Times New Roman";
+            }
+
+            .navbar-brand{
+                font-family: "Times New Roman";
+            }
+        </style>
     </head>
     <body>
 
@@ -31,7 +40,16 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="http://127.0.0.1:8000/productuser">Product</a>
+                        <a class="nav-link" href="http://127.0.0.1:8000/productuser">All Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/nguoilon">Nguoi Lon</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/sinhvien">Sinh Vien</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/treem">Tre Em</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="http://127.0.0.1:8000/contact/new">Contact</a>
@@ -40,11 +58,14 @@
                         <a class="nav-link" href="http://127.0.0.1:8000/about">About</a>
                     </li>
 
+
                 </ul>
-                <form class="d-flex">
-                    <input class="form-control me-sm-2" type="search" placeholder="Search">
-                    <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-                </form>
+                <ul class="navbar-nav">
+                    <form class="d-flex" action="{{ path('app_search') }}" method="GET" style="margin-right: 40px;">
+                        <input class="form-control me-sm-0" type="search" name="keyword" placeholder="Search" required>
+                        <button class="btn btn-secondary my-2 my-sm-0 mx-2" type="submit">Search</button>
+                    </form>
+                </ul>
               <div>
                   <form>
                       <a class="btn btn-secondary" href="/{{ app.user ? 'logout' : 'login' }}" @click="isOpen = false">

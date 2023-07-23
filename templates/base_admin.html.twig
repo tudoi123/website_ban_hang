@@ -9,6 +9,19 @@
         {% block javascripts %}
         {% endblock %}
 
+        <style>
+            *{
+                font-family: "Times New Roman";
+            }
+
+            h1{
+                font-family: "Times New Roman";
+            }
+
+            .navbar-brand{
+                font-family: "Times New Roman";
+            }
+        </style>
     </head>
     <body>
 
@@ -40,13 +53,6 @@
                     <input class="form-control me-sm-2" type="search" placeholder="Search">
                     <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
                 </form>
-              <div>
-                  <form>
-                      <a class="btn btn-secondary" href="/{{ app.user ? 'logout' : 'login' }}" @click="isOpen = false">
-                          {{ app.user ? 'logout' : 'login'}}
-                      </a>
-                  </form>
-              </div>
             </div>
         </div>
     </nav>

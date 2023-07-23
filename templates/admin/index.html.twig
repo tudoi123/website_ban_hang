@@ -3,6 +3,12 @@
 {% block title %}Hello AdminController!{% endblock %}
 
 {% block body %}
+    <style>
+        .slideadmin img{
+            width: 100%;
+            height: 550px;
+        }
+    </style>
     <br>
         <section class="content">
             <div class="container-fluid">
@@ -63,15 +69,16 @@
                             <div class="icon">
                                 <i class="ion ion-pie-graph"></i>
                             </div>
-                            <a href="http://127.0.0.1:8000/user" class="small-box-footer">Chi tiết <i class="fas fa-arrow-circle-right"></i></a>
+                            <a href="http://127.0.0.1:8000/user" class="small-box-footer">Chi tiết<i class="fas fa-arrow-circle-right"></i></a>
                         </div>
                     </div>
                     <!-- ./col -->
                 </div>
             </div>
+            <br>
+            <div class="slideadmin">
+                <img src="images/slideadmin.jpg">
+            </div>
         </section>
-
-        <img src="image/slideadmin.jpg">
-        
     </div>
 {% endblock %}
